@@ -14,9 +14,9 @@ endif
 
 .PHONY: clean librocksdb
 
-all: lab1
+all: lab1_test
 
-lab1: librocksdb lab1.cc
+lab1_test: librocksdb lab1_test.cc
 	$(CXX) $(CXXFLAGS) $@.cc -o$@ ../librocksdb.a -I../include -O2 -std=c++11 $(PLATFORM_LDFLAGS) $(PLATFORM_CXXFLAGS) $(EXEC_LDFLAGS)
 
 clean:
