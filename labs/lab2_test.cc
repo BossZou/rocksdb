@@ -55,7 +55,7 @@ int main() {
 
   constexpr size_t total_count = 10 * 1000 * 1000;
 
-  std::string key = std::string(8, 'A');
+  std::string key = std::string(128, 'A');
 //  std::array<std::string, total_count> keys;
   std::vector<std::string> keys;
 

@@ -16,7 +16,7 @@ endif
 
 .PHONY: clean librocksdb
 
-all: lab1_test lab2_test
+all: lab1_test lab2_test lab4_test
 
 lab1_test: librocksdb lab1_test.cc
 	$(CXX) $(CXXFLAGS) $@.cc -o$@ ../librocksdb.a -I../include -O2 -std=c++11 $(PLATFORM_LDFLAGS) $(PLATFORM_CXXFLAGS) $(EXEC_LDFLAGS) $(LDFLAGS)
@@ -24,8 +24,11 @@ lab1_test: librocksdb lab1_test.cc
 lab2_test: librocksdb lab2_test.cc
 	$(CXX) $(CXXFLAGS) $@.cc -o$@ ../librocksdb.a -I../include -O2 -std=c++11 $(PLATFORM_LDFLAGS) $(PLATFORM_CXXFLAGS) $(EXEC_LDFLAGS) $(LDFLAGS)
 
+lab4_test: librocksdb lab4_test.cc
+	$(CXX) $(CXXFLAGS) $@.cc -o$@ ../librocksdb.a -I../include -O2 -std=c++11 $(PLATFORM_LDFLAGS) $(PLATFORM_CXXFLAGS) $(EXEC_LDFLAGS) $(LDFLAGS)
+
 clean:
-	rm -rf ./lab1_test ./lab2_test
+	rm -rf ./lab1_test ./lab2_test ./lab4_test
 
 librocksdb:
 	cd .. && $(MAKE) static_lib

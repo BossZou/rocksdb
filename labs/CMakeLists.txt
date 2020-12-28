@@ -12,6 +12,11 @@ target_link_libraries(lab2_test
   ${ROCKSDB_LIB}
         ${dep_libs})
 
+add_executable(lab4_test
+        lab4_test.cc)
+target_link_libraries(lab4_test
+        ${ROCKSDB_LIB}
+        ${dep_libs})
 #add_executable(compact_files_example
 #  compact_files_example.cc)
 #target_link_libraries(compact_files_example
