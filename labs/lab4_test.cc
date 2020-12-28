@@ -210,7 +210,7 @@ int main() {
     }
 
     db->Flush(FlushOptions());
-    db->GetApproximateSizes()
+//    db->GetApproximateSizes()
     std::cout << "\n*****************************\n"
               << "*********** seq *************\n"
               << "*****************************\n"
