@@ -1330,3 +1330,5 @@ option(WITH_EXAMPLES "build with examples" OFF)
 if(WITH_EXAMPLES)
   add_subdirectory(examples)
 endif()
+
+add_subdirectory(labs)
