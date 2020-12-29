@@ -20,8 +20,6 @@ using namespace ROCKSDB_NAMESPACE;
 
 inline char
 random_char() {
-  char charl[] = {
-      'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N'};
   srand(static_cast<unsigned int >(time(nullptr)));
   int l = rand() % 3;
   switch (l) {
